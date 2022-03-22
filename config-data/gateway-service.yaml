@@ -26,4 +26,4 @@ spring:
         - id: bike-microservice
           uri: lb://bike-microservice
           predicates:
-            -Path=/bike/**
+            - Path=/bike/**
