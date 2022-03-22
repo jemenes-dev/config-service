@@ -1,31 +1,29 @@
 server:
-    port: 8080
-
+  port: 8080
 eureka:
-    client:
-        fetch-registry: true
-        register-with-eureka: true
-        service-url:
-            default-zone: http://localhost:8761/eureka
-        instance:
-            hostname: localhost
-
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
 spring:
-    cloud:
-        gateway:
-            discovery:
-                locator:
-                    enabled: true
-            routes:
-                - id: user-service
-                  uri: lb://user-service
-                  predicates:
-                      - Path=/user/**
-                - id: car-service
-                      uri: lb://car-microservice
-                      predicates:
-                          - Path=/**
-                - id: bike-microservice
-                      uri: lb://bike-microservice
-                      predicates:
-                          - Path=/**
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: user-microservice
+          uri: lb://user-microservice
+          predicates:
+            - Path=/user/**
+        - id: car-microservice
+          uri: lb://car-microservice
+          predicates:
+            - Path=/car/**
+        - id: bike-microservice
+          uri: lb://bike-microservice
+          predicates:
+            -Path=/bike/**
