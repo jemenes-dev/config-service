@@ -40,10 +40,10 @@ spring:
             userinfo-uri: http://localhost:100/realms/tutorial-realm/protocol/openid-connect/userinfo
             user-name-attribute: preferred_username
             token-uri: http://localhost:100/realms/tutorial-realm/protocol/openid-connect/token
-          registration:
-            client-name:
-              provider: keycloak
-              client-id: tutorial-client
-              client-secret: WpLXgID2HJuchPYnmnOuqnW63Z2kBssS
-              authorization-grant-type: authorization_code
-              redirect-uri: "{baseUrl}/login/oauth2/code/tutorial-client"
+        registration:
+          client-name:
+            provider: keycloak
+            client-id: tutorial-client
+            client-secret: WpLXgID2HJuchPYnmnOuqnW63Z2kBssS
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/tutorial-client"
