@@ -9,4 +9,4 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:100/realms/tutorial%20realm
+          issuer-uri: http://localhost:100/realms/tutorial-realm
