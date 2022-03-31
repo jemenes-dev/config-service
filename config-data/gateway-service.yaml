@@ -41,9 +41,8 @@ spring:
             user-name-attribute: preferred_username
             token-uri: http://localhost:8180/realms/tutorial-realm/protocol/openid-connect/token
         registration:
-          client-name:
+          tutorial-client:
             provider: keycloak
             client-id: tutorial-client
-            client-secret: (( vault "secret/gateway-service:client-secret" ))
-            authorization-grant-type: authorization_code
+            authorization-grant-type: authorization_codes
             redirect-uri: "{baseUrl}/login/oauth2/code/tutorial-client"
